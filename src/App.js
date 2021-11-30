@@ -1,30 +1,48 @@
-import './App.css';
-import { Canvas } from '@react-three/fiber';
-import SpinningMesh from './components/SpinningMesh';
-import styled from 'styled-components';
-import { OrbitControls } from '@react-three/drei';
-import { Suspense } from 'react';
-import Profile from './components/Profile';
-import Intro from './components/Intro';
-import Form from './components/Form';
-import Projects from './components/Projects';
-import Navbar from './components/Navbar';
+import "./App.css";
+
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import { Suspense } from "react";
+
+
+
+import NavigationBar from "./components/Navbar";
+import SpinningMesh from "./components/Home/SpinningMesh";
+
+
+import Projects from "./components/Projects/Projects";
+
+import styled from "styled-components";
+import Profile from "./components/Home/Profile";
+import AboutMe from "./components/AboutMe/AboutMe";
+import ContactMe from "./components/Contact/ContactMe";
 
 const CanvasContainer = styled.div`
   width: 100%;
   height: 100%;
-  `;
+`;
 
 
 
 function App() {
   return (
-    <>
-    <Navbar/>
-    <CanvasContainer>
+    <div className="app">
+      <NavigationBar className="navbar" />
+      <div className="profile">
+        <Profile/>
+      </div>
+      
+      {/*A litte short profile */}
+
+      {/* The 3D background section */}
+      <CanvasContainer>
         <Suspense fallback={null}>
-          <Canvas  colorManagement shadowMap camera={{ position: [-5, 2, 5], fov: 60 }}>
-            <ambientLight intensity={0.3}/>
+          <Canvas
+            colorManagement
+            shadowMap
+            camera={{ position: [-5, 2, 5], fov: 60 }}
+          >
+            <ambientLight intensity={0.3} />
             <directionalLight
               castShadow
               position={[0, 10, 0]}
@@ -43,24 +61,51 @@ function App() {
               <mesh
                 rotation={[-Math.PI / 2, 0, 0]}
                 position={[0, -3, 0]}
-                receiveShadow>
-                <planeBufferGeometry attach = 'geometry' args={[100,100]}/>
-                <shadowMaterial attach ='material' opacity ={0.3} />
+                receiveShadow
+              >
+                <planeBufferGeometry attach="geometry" args={[100, 100]} />
+                <shadowMaterial attach="material" opacity={0.3} />
               </mesh>
-              <SpinningMesh postion = {[0,1,0]} color='lightblue' args ={[3,2,1]} speed ={2}/>
-              <SpinningMesh position ={[-2,1,-5]} color='pink' speed ={6}/>
-              <SpinningMesh position ={[5,1,-2]} color='pink' speed ={6}/>
+              <SpinningMesh
+                postion={[0, 1, 0]}
+                color="lightblue"
+                args={[3, 2, 1]}
+                speed={2}
+              />
+              <SpinningMesh position={[-2, 1, -5]} color="pink" speed={6} />
+              <SpinningMesh position={[5, 1, -2]} color="pink" speed={6} />
             </group>
-            <OrbitControls/>
+            <OrbitControls />
           </Canvas>
         </Suspense>
-    </CanvasContainer>
-    <Profile/>
-    <Intro/>
-    <Projects/>
-    <Form/>
+      </CanvasContainer>
 
-    </>
+      {/* About me section */}
+      <div className="content">
+        <div className="about-me">
+          <AboutMe/>
+        </div>
+
+        <div className="projects">
+          <div className="row">
+            <div className="col-4">
+              <Projects />
+            </div>
+            <div className="col-4">
+              <Projects />
+            </div>
+            <div className="col-4">
+              <Projects />
+            </div>
+          </div>
+        </div>
+
+        <div className="contact">
+          <h1 className="title">CONTACT ME</h1>
+          <ContactMe/>
+        </div>
+      </div>
+    </div> 
   );
-}
+};
 export default App;
