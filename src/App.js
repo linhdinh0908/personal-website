@@ -87,21 +87,29 @@ function App() {
         </div>
 
         <div className="projects">
+  
           <div className="row">
             <div className="col-4">
-              <Projects />
+              <Projects 
+                title="INDEED WEB SCRAPER"
+                text="Scrape Indeed Review. Technology stack:  Python BeautifulSoup, Pandas, Matplotlib"
+              />
             </div>
             <div className="col-4">
-              <Projects />
+              <Projects
+                title = "STOCK PREDICTOR"
+                text = "tech stack: machine learning sckilearn"
+              />
             </div>
             <div className="col-4">
-              <Projects />
+              <Projects
+                title ="GARBAGE CLASSIFIER"
+                text = "tensorflow, react native"/>
             </div>
           </div>
         </div>
 
         <div className="contact">
-          <h1 className="title">CONTACT ME</h1>
           <ContactMe/>
         </div>
       </div>

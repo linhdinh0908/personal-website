@@ -1,20 +1,34 @@
 import React from 'react'
-import { Card, Button } from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap';
+import styled from 'styled-components';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-function Projects() {
+
+const CardWrapper = styled.div`
+    .card-container{
+        width: 18rem;
+        height: 16rem;
+        margin-left: 25px;
+        margin-top: 50px;
+        align-content: space-around;
+    }
+`;
+
+function Projects(props) {
     return (
-        <Card style = {{width: '20rem', height:'16rem'}}>
-            <Card.Img variant="top" src="holder.js/100px180" />
-            <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
-                </Card.Text>
-                <Button variant = "outline-info">See more</Button>
-            </Card.Body>
-        </Card>
-    )
+        <CardWrapper className="card-container">
+            <Card className="card-co{ntainer">
+                <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Body>
+                    <Card.Title>{props.title}</Card.Title>
+                    <Card.Text>
+                        {props.text}
+                    </Card.Text>
+                    <Button variant = "outline-info">See more</Button>
+                </Card.Body>
+            </Card>
+        </CardWrapper>
+    );
 }
 
 export default Projects

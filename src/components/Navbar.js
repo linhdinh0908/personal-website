@@ -12,10 +12,10 @@ function NavigationBar() {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav>
-                <Nav.Link href="#features">Home</Nav.Link>    
-                <Nav.Link href="#features">About Me</Nav.Link>
-                <Nav.Link href="#pricing">Projects</Nav.Link>
-                <Nav.Link href="#deets">Contact</Nav.Link>
+                <Nav.Link href="#home">Home</Nav.Link>    
+                <Nav.Link href="#about-me">About Me</Nav.Link>
+                <Nav.Link href="#projects">Projects</Nav.Link>
+                <Nav.Link href="#contact">Contact</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
             </Container>
