@@ -1,8 +1,10 @@
 import React from "react";
-import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading"
+import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 import "./AboutMe.css";
+import personalImage from "../../assets/Linh.jpeg";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function AboutMe(props) {
   let fadeInScreenHandler = (screen) => {
@@ -42,30 +44,32 @@ export default function AboutMe(props) {
       id={props.id || ""}
     >
       <div className="about-me-parent">
-        <ScreenHeading title={"About Me"}/>
-        <div className="about-me-card">
-          <div className="about-me-profile"></div>
-          <div className="about-me-details">
-            <span className="about-me-description">
-              {SCREEN_CONSTSANTS.description}
-            </span>
-            <div className="about-me-highlights">
-              <div className="highlight-heading">
-                <span>{SCREEN_CONSTSANTS.highlights.heading}</span>
-              </div>
-              {renderHighlight()}
+        <ScreenHeading title={"About Me"} />
+        <div className="row">
+          
+          <div className="col-4">
+            <div className="about-me-profile-background">
+              <img
+                className="about-me-profile"
+                src={personalImage}
+                alt="Me smiling against a white background"
+              />
             </div>
-            <div className="about-me-options">
-              <button
-                className="btn primary-btn"
-                onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
-              >
-                {" "}
-                Hire Me{" "}
-              </button>
-              <a href="ehizcv.pdf" download="Ehiedu Ehizcv.pdf">
-                <button className="btn highlighted-btn">Get Resume</button>
-              </a>
+          </div>
+          
+          <div className="col-8">
+            <div className="about-me-card">
+              <div className="about-me-details">
+                <span className="about-me-description">
+                  {SCREEN_CONSTSANTS.description}
+                </span>
+                <div className="about-me-highlights">
+                  <div className="highlight-heading">
+                    <span>{SCREEN_CONSTSANTS.highlights.heading}</span>
+                  </div>
+                  {renderHighlight()}
+                </div>
+              </div>
             </div>
           </div>
         </div>

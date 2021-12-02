@@ -16,6 +16,8 @@ import styled from "styled-components";
 import Profile from "./components/Home/Profile";
 import AboutMe from "./components/AboutMe/AboutMe";
 import ContactMe from "./components/Contact/ContactMe";
+import ScreenHeading from "./utilities/ScreenHeading/ScreenHeading";
+import ResumeButton from "./components/Projects/ResumeButton";
 
 const CanvasContainer = styled.div`
   width: 100%;
@@ -81,38 +83,47 @@ function App() {
       </CanvasContainer>
 
       {/* About me section */}
-      <div className="content">
-        <div className="about-me">
-          <AboutMe/>
-        </div>
+      <div className="about-me">
+        <AboutMe/>
+      </div>
 
-        <div className="projects">
-  
-          <div className="row">
-            <div className="col-4">
-              <Projects 
-                title="INDEED WEB SCRAPER"
-                text="Scrape Indeed Review. Technology stack:  Python BeautifulSoup, Pandas, Matplotlib"
-              />
-            </div>
-            <div className="col-4">
-              <Projects
-                title = "STOCK PREDICTOR"
-                text = "tech stack: machine learning sckilearn"
-              />
-            </div>
-            <div className="col-4">
-              <Projects
-                title ="GARBAGE CLASSIFIER"
-                text = "tensorflow, react native"/>
-            </div>
+      <div className="projects">
+      <ScreenHeading title={"Projects"} />
+
+        <div className="row">
+          <div className="col-4">
+            <Projects 
+              title="INDEED WEB SCRAPER"
+              text="Scrape Indeed Review. Technology stack:  Python BeautifulSoup, Pandas, Matplotlib"
+            />
+          </div>
+          <div className="col-4">
+            <Projects
+              title = "STOCK PREDICTOR"
+              text = "tech stack: machine learning sckilearn"
+            />
+          </div>
+          <div className="col-4">
+            <Projects
+              title ="GARBAGE CLASSIFIER"
+              text = "tensorflow, react native"/>
           </div>
         </div>
 
-        <div className="contact">
-          <ContactMe/>
+        <div className="row">
+          <div className="col-3">
+            <ResumeButton/>
+          </div>
         </div>
+
       </div>
+
+      
+
+      <div className="contact">
+        <ContactMe/>
+      </div>
+
     </div> 
   );
 };

@@ -7,17 +7,15 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 const CardWrapper = styled.div`
     .card-container{
         width: 18rem;
-        height: 16rem;
-        margin-left: 25px;
-        margin-top: 50px;
-        align-content: space-around;
+        height: 20rem;
+        margin: auto;
     }
 `;
 
 function Projects(props) {
     return (
-        <CardWrapper className="card-container">
-            <Card className="card-co{ntainer">
+        <CardWrapper>
+            <Card className="card-container">
                 <Card.Img variant="top" src="holder.js/100px180" />
                 <Card.Body>
                     <Card.Title>{props.title}</Card.Title>
