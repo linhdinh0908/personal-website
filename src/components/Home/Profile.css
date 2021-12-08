@@ -20,6 +20,28 @@
   transform: scale(1.5);
 }
 
+.project-button {
+  size: 10%;
+}
+
+.project-button-wrapper{
+  display: absolute;
+  margin-top: 5%;
+  justify-content: center;
+}
+
+.project-button{
+  display: absolute;
+  width: 40px;
+  animation: arrowBlink 3s infinite; 
+}
+@keyframes arrowBlink {
+  100%{
+    opacity: 0;
+  }
+}
+
+
 /*IPAD PRO RESPONSIVENESS*/
 @media only screen and (max-width: 1110px) {
   .profile-picture {

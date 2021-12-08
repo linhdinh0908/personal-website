@@ -83,11 +83,11 @@ function App() {
       </CanvasContainer>
 
       {/* About me section */}
-      <div className="about-me">
+      <div className="about-me" id="about-me">
         <AboutMe/>
       </div>
 
-      <div className="projects">
+      <div className="projects" id ="projects">
       <ScreenHeading title={"Projects"} />
 
         <div className="row">

@@ -2,7 +2,7 @@ import React from "react";
 import Typical from "react-typical";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Profile.css";
-
+import Arrow from "../../assets/arrow.png"
 
 export default function Profile() {
   return (
@@ -47,6 +47,13 @@ export default function Profile() {
         <button className="btn primary-btn"> Contact Me</button>
         <a href="ehizcv.pdf" download="Ehiedu Ehizcv.pdf">
           <button className="btn highlighted-btn">View My Resume</button>
+        </a>
+      </div>
+
+      <div className="project-button-wrapper">
+        <p>View my work </p>
+        <a href="#projects">
+          <img src={Arrow} alt="project-button" className="project-button"></img>
         </a>
       </div>
     </div>
