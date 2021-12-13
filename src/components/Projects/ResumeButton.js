@@ -3,6 +3,12 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState} from "react";
 import Resume from "../../assets/Resume.pdf";
+import styled from "styled-components";
+
+
+const PDF =styled.iframe`
+  height: 550px;  
+`
 
 function ResumeButton() {
 
@@ -11,23 +17,28 @@ function ResumeButton() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  
+
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
         View My Resume
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal size="lg" show={show} onHide={handleClose} >
         <Modal.Header closeButton>
           <Modal.Title>Linh Dinh's Resume</Modal.Title>
         </Modal.Header>
+
         <Modal.Body></Modal.Body>
-        <embed src={Resume}/>
+        <PDF src={Resume}
+            scrolling="auto"/>
+      
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <a href={Resume}>
+          <a href={Resume} name="Linh Dinh Resume">
             <Button variant="primary" onClick={handleClose}>
               Download
             </Button>

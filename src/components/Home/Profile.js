@@ -10,7 +10,7 @@ export default function Profile() {
       <div className="colz">
         <div className="colz-icon">
           <a href="https://www.linkedin.com/in/linhdinh0908">
-            <i class="bi bi-linkedin"></i>
+            <i class="fab fa-facebook-f"></i>
           </a>
         </div>
       </div>
