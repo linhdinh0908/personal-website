@@ -26,11 +26,6 @@
   min-height: calc(100vh - 50px);
 }
 
-.project-wrappers{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .resume-button {
   display: flex;
   justify-content: center;

@@ -6,3 +6,8 @@
     float: none;
     display: inline-block;
 }
+
+.active {
+        border-bottom : 3px solid white;
+}
+
