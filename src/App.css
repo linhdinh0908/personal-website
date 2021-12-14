@@ -21,17 +21,17 @@
 
 .about-me{
   width: 100%;
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
 }
 
 .projects{
   width: 100%;
-  height: calc(100vh - 50px);
+  min-height: calc(100vh-50px);
 }
 
 .contact{
   width: 100%;
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
 }
 
 

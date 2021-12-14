@@ -16,17 +16,17 @@ export default function AboutMe(props) {
 
   const SCREEN_CONSTSANTS = {
     description:
-      "Full stack web and mobile developer with background knowledge of MERN stacks with redux, along with a knack of building applications with utmost efficiency. Strong professional with a BSC willing to be an asset for an organization.",
+      "Aspiring Front End Developer with a background in business, along with a passion for learning. Strong professional with a BSC willing to be an asset for an organization.",
     highlights: {
       bullets: [
-        "Full Stack web and mobile development",
-        "Interactive Front End as per the design",
+        "Bachel of Commerce - Ryerson Univeristy",
+        "Front End development",
+        "HTML, CSS, Javascript, Python, SQL",
         "React and React Native",
-        "Redux for State Mnanagement",
-        "Building REST API",
-        "Managing database",
+
       ],
-      heading: "Here are a Few Highlights:",
+      heading: "Highlights:",
+      
     },
   };
   const renderHighlight = () => {

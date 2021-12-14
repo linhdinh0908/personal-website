@@ -20,7 +20,7 @@ function ResumeButton() {
   
 
   return (
-    <>
+    <div className="justify-content-center">
       <Button variant="primary" onClick={handleShow}>
         View My Resume
       </Button>
@@ -46,7 +46,7 @@ function ResumeButton() {
 
         </Modal.Footer>
       </Modal>
-    </>
+    </div>
   );
 }
 
