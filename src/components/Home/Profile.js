@@ -9,15 +9,19 @@ export default function Profile() {
     <div className="profile-container">
       <div className="colz">
         <div className="colz-icon">
-          <a href="https://www.linkedin.com/in/linhdinh0908">
-            <i class="fab fa-facebook-f"></i>
+          <a href="https://www.linkedin.com/in/linhdinh0908/">
+            <i className="fa fa-linkedin-square fa-lg" />
+          </a>
+          <a href="https://www.github.com/linhdinh0908/">
+            <i className="fa fa-github fa-lg" />
           </a>
         </div>
       </div>
+
       <div className="profile-details-name">
         <span className="primary-text">
           {" "}
-          Hello, I'M <span className="highlighted-text">Linh</span>
+          Hello, I'm <span className="highlighted-text">Linh</span>
         </span>
       </div>
       <div className="profile-details-role">
@@ -27,7 +31,6 @@ export default function Profile() {
             <Typical
               loop={Infinity}
               steps={[
-                
                 "Front End Enthusiast 💻",
                 1000,
                 "4th Year Business Student",
@@ -43,17 +46,14 @@ export default function Profile() {
         </span>
       </div>
 
-      <div className="profile-options">
-        <button className="btn primary-btn"> Contact Me</button>
-        <a href="ehizcv.pdf" download="Ehiedu Ehizcv.pdf">
-          <button className="btn highlighted-btn">View My Resume</button>
-        </a>
-      </div>
-
       <div className="project-button-wrapper">
         <p>View my work </p>
         <a href="#projects">
-          <img src={Arrow} alt="project-button" className="project-button"></img>
+          <img
+            src={Arrow}
+            alt="project-button"
+            className="project-button"
+          ></img>
         </a>
       </div>
     </div>

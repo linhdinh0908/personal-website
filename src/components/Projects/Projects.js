@@ -6,8 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 const CardWrapper = styled.div`
     .card-container{
-        width: 18rem;
-        height: 20rem;
+        width: 20rem;
+        height: 28rem;
         margin: auto;
     }
 `;
@@ -16,13 +16,15 @@ function Projects(props) {
     return (
         <CardWrapper>
             <Card className="card-container">
-                <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Img variant="top" src={props.image} alt={props.alt} style={{height: '16rem'}}/>
                 <Card.Body>
                     <Card.Title>{props.title}</Card.Title>
                     <Card.Text>
                         {props.text}
                     </Card.Text>
-                    <Button variant = "outline-info">See more</Button>
+                   
+                    <Button variant = "outline-info" href={props.url}>See more</Button>
+                    
                 </Card.Body>
             </Card>
         </CardWrapper>

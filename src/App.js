@@ -4,11 +4,8 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { Suspense } from "react";
 
-
-
-import NavigationBar from "./components/Navbar";
+import NavigationBar from "./components/Navbar/Navbar";
 import SpinningMesh from "./components/Home/SpinningMesh";
-
 
 import Projects from "./components/Projects/Projects";
 
@@ -19,25 +16,27 @@ import ContactMe from "./components/Contact/ContactMe";
 import ScreenHeading from "./utilities/ScreenHeading/ScreenHeading";
 import ResumeButton from "./components/Projects/ResumeButton";
 
+import IndeedScraper from "./assets/scrape-indeed-data.jpeg"
+import StockPredictor from "./assets/stock-predictor.png";
+import GarbageClassifier from "./assets/garbage-classifier.png";
+
 const CanvasContainer = styled.div`
   width: 100%;
   height: 100%;
 `;
-
-
 
 function App() {
   return (
     <div className="app">
       <NavigationBar className="navbar" />
       <div className="profile">
-        <Profile/>
+        <Profile />
       </div>
-      
+
       {/*A litte short profile */}
 
       {/* The 3D background section */}
-      <CanvasContainer>
+      <CanvasContainer id="home">
         <Suspense fallback={null}>
           <Canvas
             colorManagement
@@ -84,47 +83,56 @@ function App() {
 
       {/* About me section */}
       <div className="about-me" id="about-me">
-        <AboutMe/>
+        <AboutMe />
       </div>
 
-      <div className="projects" id ="projects">
-      <ScreenHeading title={"Projects"} />
+      <div className="projects" id="projects">
+        <ScreenHeading title={"Projects"} />
 
-        <div className="row">
-          <div className="col-4">
-            <Projects 
-              title="INDEED WEB SCRAPER"
-              text="Scrape Indeed Review. Technology stack:  Python BeautifulSoup, Pandas, Matplotlib"
-            />
-          </div>
-          <div className="col-4">
-            <Projects
-              title = "STOCK PREDICTOR"
-              text = "tech stack: machine learning sckilearn"
-            />
-          </div>
-          <div className="col-4">
-            <Projects
-              title ="GARBAGE CLASSIFIER"
-              text = "tensorflow, react native"/>
+        <div className="container">
+          <div className="row g-3">
+            
+            <div className="col-12 col-md-6 col-lg-4">
+              <Projects
+                img ={StockPredictor}
+                title="STOCK PREDICTOR"
+                text="tech stack: machine learning sckilearn"
+                url="https://github.com/linhdinh0908/Stock-Price-Prediction-Model"
+              />
+            </div>
+            
+            <div className="col-12 col-md-6 col-lg-4">
+              <Projects
+                image={IndeedScraper}
+                alt="Indeed Website Scraping Project"
+                title="INDEED WEB SCRAPER"
+                text="Scrape Indeed Review. Technology stack:  Python BeautifulSoup, Pandas, Matplotlib"
+                url="https://github.com/linhdinh0908/Indeed-Reviews-Sentiment-Analysis"
+              />
+            </div>
+            
+            <div className="col-12 col-md-6 col-lg-4">
+              <Projects
+                image={GarbageClassifier}
+                title="GARBAGE CLASSIFIER"
+                text="tensorflow, react native"
+                url ="https://github.com/linhdinh0908/TORec"
+              />
+            </div>
           </div>
         </div>
 
         <div className="row">
           <div className="col-3">
-            <ResumeButton/>
+            <ResumeButton />
           </div>
         </div>
-
       </div>
 
-      
-
-      <div className="contact">
-        <ContactMe/>
+      <div className="contact" id="contact">
+        <ContactMe />
       </div>
-
-    </div> 
+    </div>
   );
-};
+}
 export default App;

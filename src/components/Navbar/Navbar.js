@@ -12,10 +12,18 @@ function NavigationBar() {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav>
-                <Nav.Link href="#home">Home</Nav.Link>    
-                <Nav.Link href="#about-me">About Me</Nav.Link>
-                <Nav.Link href="#projects">Projects</Nav.Link>
-                <Nav.Link href="#contact">Contact</Nav.Link>
+                <Nav.Link href="#home">
+                    <i className = "fa fa-home fa-lg"> Home</i>
+                </Nav.Link>    
+                <Nav.Link href="#about-me">
+                    <i className = "fa fa-user fa-lg"> About Me</i>
+                </Nav.Link>
+                <Nav.Link href="#projects">
+                    <i className ="fa fa-laptop fa-lg"> Projects</i>
+                </Nav.Link>
+                <Nav.Link href="#contact">
+                    <i className = "fa fa-envelope fa-lg"> Contact</i>
+                </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
             </Container>
