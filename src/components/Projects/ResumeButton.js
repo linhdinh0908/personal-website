@@ -20,7 +20,7 @@ function ResumeButton() {
   
 
   return (
-    <div className="justify-content-center">
+    <div className="resume-button">
       <Button variant="primary" onClick={handleShow}>
         View My Resume
       </Button>

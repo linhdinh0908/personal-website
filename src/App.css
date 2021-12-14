@@ -2,7 +2,9 @@
   height: 100vh;
 }
 .navbar{
-  height: 50px;
+  min-height: 50px;
+  justify-content: center;
+
 }
 .canvas-container {
   width:100vw;
@@ -19,15 +21,31 @@
   z-index:99;
 }
 
+.projects{
+  width: 100%;
+  min-height: calc(100vh - 50px);
+}
+
+.project-wrappers{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.resume-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+
+}
+
 .about-me{
   width: 100%;
   min-height: calc(100vh - 50px);
 }
 
-.projects{
-  width: 100%;
-  min-height: calc(100vh-50px);
-}
+
 
 .contact{
   width: 100%;

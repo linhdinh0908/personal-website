@@ -81,16 +81,21 @@ function App() {
         </Suspense>
       </CanvasContainer>
 
-      {/* About me section */}
-      <div className="about-me" id="about-me">
-        <AboutMe />
-      </div>
 
       <div className="projects" id="projects">
         <ScreenHeading title={"Projects"} />
 
         <div className="container">
           <div className="row g-3">
+            
+            <div className="col-12 col-md-6 col-lg-4">
+              <Projects
+                image={GarbageClassifier}
+                title="GARBAGE CLASSIFIER"
+                text="tensorflow, react native"
+                url ="https://github.com/linhdinh0908/TORec"
+              />
+            </div>
             
             <div className="col-12 col-md-6 col-lg-4">
               <Projects
@@ -111,22 +116,18 @@ function App() {
               />
             </div>
             
-            <div className="col-12 col-md-6 col-lg-4">
-              <Projects
-                image={GarbageClassifier}
-                title="GARBAGE CLASSIFIER"
-                text="tensorflow, react native"
-                url ="https://github.com/linhdinh0908/TORec"
-              />
-            </div>
+            
           </div>
         </div>
 
-        <div className="row">
-          <div className="col-3">
+        <div className="resume-button">
             <ResumeButton />
-          </div>
-        </div>
+         </div>
+      </div>
+
+      {/* About me section */}
+      <div className="about-me" id="about-me">
+        <AboutMe />
       </div>
 
       <div className="contact" id="contact">
