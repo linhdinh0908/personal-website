@@ -9,7 +9,7 @@ function Projects(props) {
     return (
             <Card className="card text-center shadow">
                 <div className="overflow">
-                    <Card.Img className="card-image" variant="top" src={props.image} alt={props.alt} style={{height: '16rem'}}/>
+                    <Card.Img className="card-image" variant="top" src={props.image} alt={props.alt}  style={{height: '16rem'}}/>
                 </div>
                 <Card.Body>
                     <Card.Title>{props.title}</Card.Title>

@@ -91,6 +91,7 @@ function App() {
             <div className="col-12 col-md-6 col-lg-4">
               <Projects
                 image={GarbageClassifier}
+                alt="homepage of the Garbage Classifier app"
                 title="GARBAGE CLASSIFIER"
                 text="tensorflow, react native"
                 url ="https://github.com/linhdinh0908/TORec"
@@ -100,6 +101,7 @@ function App() {
             <div className="col-12 col-md-6 col-lg-4">
               <Projects
                 image ={StockPredictor}
+                alt="Stock Volatility Diagram"
                 title="STOCK PREDICTOR"
                 text="tech stack: machine learning sckilearn"
                 url="https://github.com/linhdinh0908/Stock-Price-Prediction-Model"

@@ -53,6 +53,7 @@ export default function AboutMe(props) {
                 className="about-me-profile"
                 src={personalImage}
                 alt="Me smiling against a white background"
+                title="headshot"
               />
             </div>
           </div>
