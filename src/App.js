@@ -94,7 +94,7 @@ function App() {
             
             <div className="col-12 col-md-6 col-lg-4">
               <Projects
-                img ={StockPredictor}
+                image ={StockPredictor}
                 title="STOCK PREDICTOR"
                 text="tech stack: machine learning sckilearn"
                 url="https://github.com/linhdinh0908/Stock-Price-Prediction-Model"
