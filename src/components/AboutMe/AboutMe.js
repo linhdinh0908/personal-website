@@ -49,12 +49,15 @@ export default function AboutMe(props) {
           
           <div className="col-4">
             <div className="about-me-profile-background">
-              <img
+              <figure>
+                <img
                 className="about-me-profile"
                 src={personalImage}
                 alt="Me smiling against a white background"
                 title="headshot"
-              />
+                />
+                <figcaption>My Headshot</figcaption>
+              </figure>
             </div>
           </div>
           

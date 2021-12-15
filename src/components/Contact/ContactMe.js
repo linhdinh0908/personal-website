@@ -20,6 +20,7 @@ export default function ContactMe(props) {
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
   const [name, setName] = useState("");
+  const [organization, setOrganization] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [banner, setBanner] = useState("");
@@ -28,9 +29,15 @@ export default function ContactMe(props) {
   const handleName = (e) => {
     setName(e.target.value);
   };
+
+  const handleOrganization = (e) => {
+    setOrganization(e.target.value);
+  };
+
   const handleEmail = (e) => {
     setEmail(e.target.value);
   };
+
   const handleMessage = (e) => {
     setMessage(e.target.value);
   };
@@ -40,6 +47,7 @@ export default function ContactMe(props) {
     try {
       let data = {
         name,
+        organization,
         email,
         message,
       };
@@ -96,7 +104,10 @@ export default function ContactMe(props) {
             <p>{banner}</p>
             <label htmlFor="name">Name</label>
             <input type="text" onChange={handleName} value={name} />
-
+            
+            <label htmlFor="name">Organization</label>
+            <input type="text" onChange={handleOrganization} value={name} />
+            
             <label htmlFor="email">Email</label>
             <input type="email" onChange={handleEmail} value={email} />
 
