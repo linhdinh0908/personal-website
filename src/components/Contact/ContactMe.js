@@ -79,35 +79,26 @@ export default function ContactMe(props) {
           <h2 className="title">
             <Typical loop={Infinity} steps={["Get In Touch 📧", 1000]} />
           </h2>{" "}
-          <a href="https://web.facebook.com/?_rdc=1&_rdr">
-            <i className="fa fa-facebook-square" />
+          <a href="https://www.linkedin.com/in/linhdinh0908/">
+            <i className="fa fa-linkedin-square fa-3x" />
           </a>
-          <a href="#">
-            <i className="fa fa-google-plus-square" />
-          </a>
-          <a href="https://www.instagram.com/instructor_ehizeex/">
-            <i className="fa fa-instagram" />
-          </a>
-          <a href="https://www.youtube.com/channel/UCSSr5ZDFbilpZ592_ycoAwA">
-            <i className="fa fa-youtube-square" />
-          </a>
-          <a href="https://twitter.com/Ehiedu_baba">
-            <i className="fa fa-twitter" />
+          <a href="https://www.github.com/linhdinh0908/">
+            <i className="fa fa-github fa-3x" />
           </a>
         </div>
         <div className="back-form">
           <div className="img-back">
-            <h4>Send Your Email Here!</h4>
+            <h3>Send Your Email Here!</h3>
             <img src={imgBack} alt="image not found" />
           </div>
           <form onSubmit={submitForm}>
             <p>{banner}</p>
             <label htmlFor="name">Name</label>
             <input type="text" onChange={handleName} value={name} />
-            
+
             <label htmlFor="name">Organization</label>
             <input type="text" onChange={handleOrganization} value={name} />
-            
+
             <label htmlFor="email">Email</label>
             <input type="email" onChange={handleEmail} value={email} />
 

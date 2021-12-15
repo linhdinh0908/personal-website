@@ -21,7 +21,7 @@ function ResumeButton() {
 
   return (
     <div className="resume-button">
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="primary" size="lg" onClick={handleShow}>
         View My Resume
       </Button>
 

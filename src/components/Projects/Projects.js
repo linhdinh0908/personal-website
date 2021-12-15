@@ -16,7 +16,7 @@ function Projects(props) {
                     <Card.Text>
                         {props.text}
                     </Card.Text>
-                    <Button variant = "outline-info" href={props.url}>See more</Button>
+                    <Button variant = "outline-dark" href={props.url}>See more</Button>
                 </Card.Body>
             </Card>
     );

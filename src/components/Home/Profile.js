@@ -9,10 +9,10 @@ export default function Profile() {
     <div className="profile-container">
       <div className="colz">
         <div className="colz-icon">
-          <a href="https://www.linkedin.com/in/linhdinh0908/">
+          <a href="https://www.linkedin.com/in/linhdinh0908/"> LinkedIn 
             <i className="fa fa-linkedin-square fa-lg" />
           </a>
-          <a href="https://www.github.com/linhdinh0908/">
+          <a href="https://www.github.com/linhdinh0908/">Github 
             <i className="fa fa-github fa-lg" />
           </a>
         </div>
@@ -29,7 +29,6 @@ export default function Profile() {
           {" "}
           <h1>
             <Typical
-              loop={Infinity}
               steps={[
                 "Front End Enthusiast 💻",
                 1000,
@@ -47,11 +46,11 @@ export default function Profile() {
       </div>
 
       <div className="project-button-wrapper">
-        <p>View my work </p>
+        <h3>Check out my work </h3>
         <a href="#projects">
           <img
             src={Arrow}
-            alt="project-button"
+            alt="project button"
             className="project-button"
           ></img>
         </a>
