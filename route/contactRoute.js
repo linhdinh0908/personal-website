@@ -19,7 +19,7 @@ router.post('/contact',(req,res) => {
         let mailOptions = {
             from: data.email,
             to:'linhd.official@gmail.com',
-            subject: `message from ${data.name}`,
+            subject: `Message from ${data.name}`,
             html:`
             
             <h3>Info</h3>
