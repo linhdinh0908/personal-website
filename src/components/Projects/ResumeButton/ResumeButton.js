@@ -2,12 +2,13 @@ import { Button, Modal } from "react-bootstrap";
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState} from "react";
-import Resume from "../../assets/Resume.pdf";
+import Resume from "../../../assets/Resume.pdf";
 import styled from "styled-components";
 
 
 const PDF =styled.iframe`
-  height: 550px;  
+  height: 500px;
+  width: 100%;
 `
 
 function ResumeButton() {
@@ -31,8 +32,7 @@ function ResumeButton() {
         </Modal.Header>
 
         <Modal.Body></Modal.Body>
-        <PDF src={Resume}
-            scrolling="auto"/>
+          <PDF src={Resume} name={"Linh Dinh Resume"}/>
       
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

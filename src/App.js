@@ -14,11 +14,7 @@ import Profile from "./components/Home/Profile";
 import AboutMe from "./components/AboutMe/AboutMe";
 import ContactMe from "./components/Contact/ContactMe";
 import ScreenHeading from "./utilities/ScreenHeading/ScreenHeading";
-import ResumeButton from "./components/Projects/ResumeButton";
 
-import IndeedScraper from "./assets/scrape-indeed-data.jpeg"
-import StockPredictor from "./assets/stock-predictor.png";
-import GarbageClassifier from "./assets/garbage-classifier.png";
 
 const CanvasContainer = styled.div`
   width: 100%;
@@ -84,53 +80,14 @@ function App() {
 
       <div className="projects" id="projects">
         <ScreenHeading title={"Projects"} />
-
-        <div className="container">
-          <div className="row g-3">
-            
-            <div className="col-12 col-md-6 col-lg-4">
-              <Projects
-                image={GarbageClassifier}
-                alt="homepage of the Garbage Classifier app"
-                title="GARBAGE CLASSIFIER"
-                text="tensorflow, react native"
-                url ="https://github.com/linhdinh0908/TORec"
-              />
-            </div>
-            
-            <div className="col-12 col-md-6 col-lg-4">
-              <Projects
-                image ={StockPredictor}
-                alt="Stock Volatility Diagram"
-                title="STOCK PREDICTOR"
-                text="tech stack: machine learning sckilearn"
-                url="https://github.com/linhdinh0908/Stock-Price-Prediction-Model"
-              />
-            </div>
-            
-            <div className="col-12 col-md-6 col-lg-4">
-              <Projects
-                image={IndeedScraper}
-                alt="Indeed Website Scraping Project"
-                title="INDEED WEB SCRAPER"
-                text="Scrape Indeed Review. Technology stack:  Python BeautifulSoup, Pandas, Matplotlib"
-                url="https://github.com/linhdinh0908/Indeed-Reviews-Sentiment-Analysis"
-              />
-            </div>
-            
-            
-          </div>
-        </div>
-
-        <div className="resume-button">
-            <ResumeButton />
-         </div>
+        <Projects/>
       </div>
 
       {/* About me section */}
       <div className="about-me" id="about-me">
         <AboutMe />
       </div>
+      <projectCard/>
 
       <div className="contact" id="contact">
         <ContactMe />

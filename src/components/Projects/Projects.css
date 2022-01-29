@@ -1,21 +1,17 @@
-.card {
-    width: 20rem;
-    height: 28rem;
+#tabs {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: black;
 }
-
-.card:hover{
-    box-shadow: 5px 10px 20px 1px rgba(0,0,0,0.253) !important;
+.title {
+    color: pink;
 }
-
-.overflow {
-    overflow:hidden;
+.resume-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+  
 }
-
-.card-image{
-    transform: scale(1);
-    transition: transform 0.8s ease;
-}
-.card-image:hover{
-    transform: scale(1.8);
-}
-

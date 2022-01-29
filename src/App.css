@@ -26,15 +26,6 @@
   min-height: calc(100vh - 50px);
 }
 
-.resume-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 30px;
-
-}
-
 .about-me{
   width: 100%;
   min-height: calc(100vh - 50px);
